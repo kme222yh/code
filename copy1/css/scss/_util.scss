@@ -1,0 +1,22 @@
+// ブレークポイント
+$break-point: 1192 768;
+
+
+// 色々
+$c1: #333;
+$c2: #D96B64;
+$c3: #EBB94D;
+$c4: #F9F2F4;
+$c5: #C6254E;
+$c6: #006EA9;
+$c7: #FEF5E0;
+
+
+
+
+
+@mixin media($index: 1){
+    @media screen and (min-width: (nth($break-point, $index)+'px')) {
+        @content;
+    }
+}

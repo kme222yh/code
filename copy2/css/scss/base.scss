@@ -1,0 +1,45 @@
+// 本番出力 :   node-sass --watch scss --output . --output-style compressed
+// 試験出力 :   node-sass --watch scss --output . --output-style expand
+
+
+@import "reset";
+
+@import "util";
+
+@import "header";
+@import "main";
+@import "footer";
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+br[class="rep"]{
+    @include media{
+        display: none;
+    }
+}
+
+
+html, body{
+    height: 100%;
+}
+
+
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+    animation: FeedIn 2s;
+}
+@keyframes FeedIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
