@@ -1,0 +1,6 @@
+header h1{
+    @include main-text;
+    @include hover(.5s){
+        color: c(1);
+    }
+}
