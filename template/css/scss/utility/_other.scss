@@ -1,0 +1,50 @@
+// フレックスmix
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+// ホバーmixin 時間を渡せる
+@mixin hover($time: .3s){
+    &:hover{
+        transition: $time;
+        @content;
+    }
+}
+
+
+
+// メディアクリエリ関係
+$break-point: 769 481;
+@mixin desktop{
+    @media screen and (min-width: '769px'){
+        @content;
+    }
+}
+@mixin tablet{
+    @media screen and (min-width: '481px'){
+        @content;
+    }
+}
+@mixin mobile{
+    @media screen and (max-width: '481px'){
+        @content;
+    }
+}
+
+
+
+
+
+// 色関係
+$main-color: white;
+$sub-color: white;
+$sub-sub-color: white;
+$c: white black;
+@function c($index){
+    @return nth($c, $index);
+}
